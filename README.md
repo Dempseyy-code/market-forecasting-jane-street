@@ -27,6 +27,7 @@ competition's weighted R², while avoiding data leakage.
   Possible explanation (untested): the underlying data sources changed over time.
   This matters for modelling because a model trained on early dates never sees
   these features.
+  ![Feature availability over time](feature_availability.png)
 
 ## Methods
 *(to be filled in)*
