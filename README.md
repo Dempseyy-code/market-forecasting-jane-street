@@ -13,7 +13,7 @@ competition's weighted R², while avoiding data leakage.
 
 ## Status
 - [x] Data loaded and explored
-- [ ] Validation scheme
+- [x] Validation scheme
 - [ ] Baselines
 - [ ] Neural models
 - [ ] Analysis and write-up
