@@ -20,9 +20,13 @@ competition's weighted R², while avoiding data leakage.
 
 ## Findings so far
 - The dataset has 10 partitions covering about 1,700 days and 20+ symbols per slice.
-- Some features are entirely missing in early days and appear later in the
-  dataset's history (features 00-04 are empty at the start, populated by the end).
-  *(Exact switch-on dates: to be added.)*
+- Feature availability changes over time. Features 00-04 are entirely missing
+  before date 247, and features 21, 26, 27 and 31 are missing before date 528
+  (switch-on measured as the first date where more than half of rows have a value).
+  After switching on, availability stays near 100% with brief temporary drops.
+  Possible explanation (untested): the underlying data sources changed over time.
+  This matters for modelling because a model trained on early dates never sees
+  these features.
 
 ## Methods
 *(to be filled in)*
