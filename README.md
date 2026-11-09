@@ -30,7 +30,15 @@ competition's weighted R², while avoiding data leakage.
   ![Feature availability over time](feature_availability.png)
 
 ## Methods
-*(to be filled in)*
+**Validation:** walk-forward, split by date (never random). Three validation blocks of
+150 days each, taken from the most recent data (dates 1249-1698). For each block the
+model trains only on earlier dates, with a 20-day gap before the block to avoid leakage
+across the boundary.
+
+**Metric:** sample-weighted zero-mean R² on responder_6 (the competition metric).
+Sanity checks: predicting zero scores exactly 0; predicting the training mean scores
+about ±0.00003 on all three folds. Scores in this problem are tiny; the best
+leaderboard scores were around 0.006-0.01.
 
 ## Results
 *(to be filled in)*
