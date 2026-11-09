@@ -41,7 +41,14 @@ about ±0.00003 on all three folds. Scores in this problem are tiny; the best
 leaderboard scores were around 0.006-0.01.
 
 ## Results
-*(to be filled in)*
+Weighted zero-mean R² on responder_6, walk-forward validation (3 folds).
+
+| Model | Fold 1 | Fold 2 | Fold 3 | Mean |
+|---|---|---|---|---|
+| Predict zero | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
+| Ridge (alpha=1000, missing filled with 0) | 0.0048 | 0.0061 | 0.0020 | 0.0043 |
+
+Training data: dates >= 528, every 10th time step; validation uses all rows.
 
 ## What didn't work
 *(to be filled in)*
